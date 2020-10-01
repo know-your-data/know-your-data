@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title> Data Outpost</title>
-        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" >
-        <link rel="stylesheet" type="text/css" href="/static/home/style.css">
-    </head>
-    <body>
-        <header>
+ {% extends 'main.html' %}
+
+ {% block content %}
+ <header>
             <div class="container">
-            <h1 class="logo">Data Outpost</h1>
+            <h1 class="logo">know-your-data</h1>
             <strong><nav>
           
             </nav></strong>
@@ -32,12 +27,12 @@
                 suscipit a risus ut, sollicitudin aliquet magna. 
             </p>
         </div>
-        
-        <div class="social">
-            
-            
-        </div>
-    </body>
-    
-</html>
 
+        <div class="platforms">
+            <ul>
+                {% for x in social_platforms %}
+                    <li class="platformli"> <a class="platformua" href="">{{x}}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endblock %}

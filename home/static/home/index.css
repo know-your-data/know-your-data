@@ -16,23 +16,41 @@ html {
     font-size: larger;
 }
 
+nav ul li{
+    display: inline;
+    right: 0;
+}
+
+
+
+
+
+
+
 
 
 .social{
     margin: 10%;
 }
 
-div ul{
+ul {
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.platforms ul{
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
     list-style-type: none;
     padding: 0;
     margin: 0;
-
 }
 
-li{
+.platformli{
     background: rgb(148, 148, 223);
     padding: 5px;
     width: 300px;
@@ -46,18 +64,12 @@ li{
     
 }
 
-li:hover{
+.platformli:hover{
     background: rgb(212, 212, 255);
     color: black;
 }
 
-
-a{
-    text-decoration: none;
-    color: white;
-}
-
-a:hover {
+.platforma:hover {
     color: black;
 }
 
