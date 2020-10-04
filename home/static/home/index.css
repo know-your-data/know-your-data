@@ -38,7 +38,13 @@ ul {
 }
 
 a{
+    color: black;
+}
+
+a:hover {
+    color: black;
     text-decoration: none;
+
 }
 
 .platforms ul{
@@ -68,9 +74,12 @@ a{
     background: rgb(212, 212, 255);
     color: black;
 }
-
-.platforma:hover {
-    color: black;
+div ul li a{
+    text-decoration: none;
+    color: white;
 }
+
+
+
 
 

@@ -1,18 +1,32 @@
- {% extends 'main.html' %}
+{% extends 'main.html' %}
+{% block content %}
 
- {% block content %}
- <header>
-            <div class="container">
-            <h1 class="logo">know-your-data</h1>
-            <strong><nav>
-          
-            </nav></strong>
-        </div>
-        </header>
+<form method="post" enctype="multipart/form-data"> 
+{% csrf_token %}
+<input name="doc" type="file">
+<button type="submit"> Upload JSON file </button>
+</form>
 
-        <div class="instructions">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="instructions">
             <p>
-
                 Orci varius natoque penatibus et magnis dis parturient montes, 
                 nascetur ridiculus mus. Nunc ligula magna, volutpat nec orci et, 
                 sagittis aliquam augue. Quisque ut neque non mauris hendrerit 
@@ -27,12 +41,4 @@
                 suscipit a risus ut, sollicitudin aliquet magna. 
             </p>
         </div>
-
-        <div class="platforms">
-            <ul>
-                {% for x in social_platforms %}
-                    <li class="platformli"> <a class="platformua" href="/upload">{{x}}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-    {% endblock %}
+{% endblock %}
