@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from home.views import homeView, uploadView
+from home.views import homeView, uploadView, visualizationView
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -23,7 +23,8 @@ urlpatterns = [
     path('home/', homeView, name='home'),
     path('', homeView, name='home'),
     path('admin/', admin.site.urls),
-    path('upload/', uploadView, name='upload')
+    path('upload/', uploadView, name='upload'),
+    path('data/', visualizationView, name="data"),
 ]
 
 #only use id in development not production

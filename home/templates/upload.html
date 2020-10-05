@@ -4,7 +4,7 @@
 <form method="post" enctype="multipart/form-data"> 
 {% csrf_token %}
 <input name="doc" type="file">
-<button type="submit"> Upload JSON file </button>
+<button type="submit" onClick="window.open('/data');"> Upload JSON file </button>
 </form>
 
 
