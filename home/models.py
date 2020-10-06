@@ -2,6 +2,8 @@ from django.db import models
 
 
 # Still in working progress. This doc needs to include the data from the json file uploaded
+class SomeModel(models.Model):
+    name = models.CharField(max_length=50)
 
 # class MyModelName(models.Model):
 #         """A typical class defining a model, derived from the Model class."""
