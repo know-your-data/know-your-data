@@ -1,7 +1,15 @@
 from django.db import models
+from pathlib import Path
+import os
+import json
 
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
 
-# Still in working progress. This doc needs to include the data from the json file uploaded
+def link():
+    with open(os.path.join(BASE_DIR, 'home/media/your_topics.json'), "r") as read_file:
+        data = json.load(read_file)    
+
 class SomeModel(models.Model):
     name = models.CharField(max_length=50)
 
