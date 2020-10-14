@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.views.generic import TemplateView
 from django.core.files.storage import FileSystemStorage
 import json
-from data import *
+from home.models import *
 
 # from pathlib import Path
 # import os
@@ -31,9 +31,11 @@ def uploadView(request):
 #     print(data.keys())
 
 def visualizationView(request):
-    cont = {
-        data
-    }
+    if request == 'GET':
+        hek = request.is_secure()
+        cont = link()
+        cont.save(hek.name, hek)
+
     return render(request, 'data.html', cont)
 
 # def aboutView(request):
